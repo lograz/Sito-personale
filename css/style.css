@@ -127,7 +127,7 @@ img.logo{
     text-decoration: none;
     text-align: center;
     color: black;
-    line-height: 51px;
+    line-height: 67px;
     transform: rotate(0deg);
     transition: all 0.5 ease-in-out;
  }
@@ -135,5 +135,21 @@ img.logo{
     background: black;
     color: white;
     
-    transform: rotate(45deg);
+    transform: rotate(-45deg);
  }
+ .all .lista-awards:hover ~ .effect {
+    transform: translate(-50%, 9%) scale(1);
+    opacity: 1;
+}
+
+.effect {
+    position: absolute;
+  pointer-events: none;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    border-radius: 25px;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%) scale(.2);
+    opacity: 0;	
+}
