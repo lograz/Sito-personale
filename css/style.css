@@ -15,6 +15,10 @@
 
 .col.card.sette.contact {
     width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 img.logo{
     height: 56px;
