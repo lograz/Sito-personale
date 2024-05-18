@@ -1,0 +1,135 @@
+
+
+.card {
+    background-color: #E6EFF8;
+    border-radius: 16px;
+    padding: 32px;
+    box-sizing: border-box;
+}
+.col.card.uno.chi-sono {
+    width: 60%;
+}
+.col.card.quattro.evidenza {
+    width: 60%;
+}
+
+.col.card.sette.contact {
+    width: 60%;
+}
+img.logo{
+    height: 56px;
+}
+.last-update{
+    
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: row;
+    
+}
+.card-contact a {
+    color: black;
+    font-size: 4em;
+    font-weight: 700;
+    text-decoration: unset;
+}
+.card.contact {
+    background-color: #82E631;
+    border-radius: 16px;
+    padding: 32px;
+    box-sizing: border-box;
+    
+}
+.card .badge {
+    background-color: #82E631;
+    width: fit-content;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 44px;
+    font-weight: 700;
+}
+.card .badge.inverse {
+    background-color: #ffffff;
+    width: fit-content;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 44px;
+    font-weight: 700;
+}
+.card img {
+    height: 96px;
+    border-radius: 100px;
+}
+.card .now{
+    font-weight: 400;
+    color: #323940;
+}
+.card .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #81e630;
+    border-radius: 100px;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.project .evidenza{
+    
+    background-image: url(../img/evidenza/system-management.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media screen and (max-width: 1005px) {
+    .project .evidenza {
+      height: 60vh;
+    }
+  }
+.lista-competenza {
+ 
+        border-bottom: 1px solid;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: flex-start;
+        align-items: center;
+        justify-content: flex-start;
+    
+}
+.lista-competenza.last {
+   border: none;
+}
+
+.lista-awards {
+ 
+    border-bottom: 1px solid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.lista-awards.last {
+    border: none;
+ }
+ a.button{
+    height: 54px;
+    width: 54px;
+    background: none;
+    border: 1px solid black;
+    border-radius: 50px;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    line-height: 51px;
+    transform: rotate(0deg);
+    transition: all 0.5 ease-in-out;
+ }
+ a:hover.button{
+    background: black;
+    color: white;
+    
+    transform: rotate(45deg);
+ }
