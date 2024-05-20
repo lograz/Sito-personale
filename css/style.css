@@ -406,3 +406,8 @@ background-size: cover;
     color: #323940;
 }
 
+.work video {
+    width: 100%;
+    border-radius: 16px;
+}
+
