@@ -60,10 +60,13 @@ img.logo{
 }
 .card.contact {
     background-color: #82E631;
+background-image: url(../img/contact.png); 
+background-size: cover;
+    background-position: center center;
     border-radius: 16px;
     padding: 32px;
     box-sizing: border-box;
-    
+    background-blend-mode: multiply;
 }
 .card.live {
     display: flex;
@@ -79,6 +82,13 @@ img.logo{
 }
 .card.cv {
     background-color: #0C1E2F;
+    background-image: url(../img/cv.png); 
+background-size: cover;
+    background-position: center center;
+    border-radius: 16px;
+    padding: 32px;
+    box-sizing: border-box;
+    background-blend-mode: luminosity;
     
     border-radius: 16px;
     padding: 32px;
@@ -87,8 +97,25 @@ img.logo{
 }
 .card.cv h2{
     color: white;
+    font-weight: 700;
+}
+.card.contact h2{
+    
+    font-weight: 700;
 }
 .card .badge {
+    color:#0C1E2F;
+    background-color: #82E631;
+    width: fit-content;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 44px;
+    font-weight: 700;
+}
+.card.evidenza .badge {
+    color:#0C1E2F;
+    position: absolute;
+    z-index: 99999;
     background-color: #82E631;
     width: fit-content;
     padding: 4px 12px;
@@ -97,6 +124,7 @@ img.logo{
     font-weight: 700;
 }
 .card .badge.inverse {
+    color:#0C1E2F;
     background-color: #ffffff;
     width: fit-content;
     padding: 4px 12px;
