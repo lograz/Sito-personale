@@ -434,6 +434,9 @@ li a {
 .row.footer {
     align-items: center;
 }
+.work .col{
+    width: 32%;
+}
 
 @media screen and (max-width: 800px) {
     .chi-sono h2 {
@@ -466,4 +469,11 @@ li a {
             line-height: 24px;
         
     }
+    .work .col{
+        width: inherit;
+    }
   }
+
+
+  
+  
