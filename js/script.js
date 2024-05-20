@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function hideLoader() {
         const loader = document.getElementById("loader");
-        loader.style.display = "none";
+        document.getElementById("loader").classList.add("loaderani")
+
     }
 
     function showContent() {

@@ -13,12 +13,21 @@
     width: 60%;
 }
 
-.col.card.sette.contact {
+col.card.sette.contact {
     width: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
+    overflow: hidden;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+}
+.card-contact {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
 }
 img.logo{
     height: 56px;
@@ -33,7 +42,13 @@ img.logo{
 }
 .card-contact a {
     color: black;
-    font-size: 4em;
+    font-size: 1.15em;
+    font-weight: 500;
+    text-decoration: unset;
+}
+ a.email {
+    color: black;
+    font-size: 4vw;
     font-weight: 700;
     text-decoration: unset;
 }
@@ -106,7 +121,7 @@ img.logo{
 
 .lista-awards {
  
-    border-bottom: 1px solid;
+    border-bottom: 1px solid black;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -118,7 +133,7 @@ img.logo{
 .lista-awards.last {
     border: none;
  }
- a.button{
+ a .button{
     height: 54px;
     width: 54px;
     background: none;
@@ -129,27 +144,21 @@ img.logo{
     color: black;
     line-height: 67px;
     transform: rotate(0deg);
-    transition: all 0.5 ease-in-out;
+    
  }
- a:hover.button{
+ a:hover .button{
     background: black;
     color: white;
     
     transform: rotate(-45deg);
+    transition: all 0.5 ease-in-out;
  }
- .all .lista-awards:hover ~ .effect {
-    transform: translate(-50%, 9%) scale(1);
-    opacity: 1;
+ .desc_progetto h6 {
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: 500;
+    color: black;
 }
-
-.effect {
-    position: absolute;
-  pointer-events: none;
-    z-index: 1;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-    border-radius: 25px;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%) scale(.2);
-    opacity: 0;	
+.desc_progetto h4 {
+    margin-top: 8px;
 }
