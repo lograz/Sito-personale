@@ -5,6 +5,12 @@
     border-radius: 16px;
     padding: 32px;
     box-sizing: border-box;
+    transform: scale(1);
+    transition: all 0.4s;
+}
+a.col.card.ani:hover {
+    transform: scale(0.99);
+    transition: all 0.4s;
 }
 .col.card.uno.chi-sono {
     width: 60%;
@@ -184,6 +190,7 @@ img.logo{
     color: black;
     line-height: 67px;
     transform: rotate(0deg);
+    transition: all 0.5s ease-in-out;
     
  }
  a:hover .button{
