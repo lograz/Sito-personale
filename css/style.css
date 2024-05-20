@@ -47,13 +47,13 @@ img.logo{
     
 }
 .card-contact a {
-    color: black;
+    color: #0C1E2F;
     font-size: 1.15em;
     font-weight: 500;
     text-decoration: unset;
 }
  a.email {
-    color: black;
+    color: #0C1E2F;
     font-size: 4vw;
     font-weight: 700;
     text-decoration: unset;
@@ -64,6 +64,29 @@ img.logo{
     padding: 32px;
     box-sizing: border-box;
     
+}
+.card.live {
+    display: flex;
+    background-color: #82E631;
+    border-radius: 16px;
+    padding: 32px;
+    box-sizing: border-box;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+.card.cv {
+    background-color: #0C1E2F;
+    
+    border-radius: 16px;
+    padding: 32px;
+    box-sizing: border-box;
+    
+}
+.card.cv h2{
+    color: white;
 }
 .card .badge {
     background-color: #82E631;
@@ -167,7 +190,7 @@ img.logo{
 
 .lista-awards {
  
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #0C1E2F;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -183,28 +206,70 @@ img.logo{
     height: 54px;
     width: 54px;
     background: none;
-    border: 1px solid black;
+    border: 1px solid #0C1E2F;
     border-radius: 50px;
     text-decoration: none;
     text-align: center;
-    color: black;
+    color: #0C1E2F;
     line-height: 67px;
     transform: rotate(0deg);
     transition: all 0.5s ease-in-out;
     
  }
+ a.cv .button{
+    height: 54px;
+    width: 54px;
+    background: none;
+    border: 1px solid #ffffff;
+    border-radius: 50px;
+    text-decoration: none;
+    text-align: center;
+    color: #ffffff;
+    line-height: 67px;
+    transform: rotate(0deg);
+    transition: all 0.5s ease-in-out;
+    
+ }
+ a .button.inter{
+    height: 54px;
+    width: 54px;
+    background: none;
+    border: 1px solid #0C1E2F;
+    border-radius: 50px;
+    text-decoration: none;
+    text-align: center;
+    color: #0C1E2F;
+    line-height: 67px;
+    transform: translateX(0%);
+    transition: all 0.5s ease-in-out;
+    
+ }
  a:hover .button{
-    background: black;
+    background: #0C1E2F;
     color: white;
     
     transform: rotate(-45deg);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
+ }
+ a:hover .button.download{
+    background: #ffffff;
+    color: #0C1E2F;
+    
+    transform: rotate(90deg);
+    transition: all 0.2s ease-in-out;
+ }
+ a:hover .button.inter{
+    background: #0C1E2F;
+    color: white;
+    
+    transform: translateX(10%);
+    transition: all 0.2s ease-in-out;
  }
  .desc_progetto h6 {
     margin-bottom: 0;
     font-size: 12px;
     font-weight: 500;
-    color: black;
+    color: #0C1E2F;
 }
 .desc_progetto h4 {
     margin-top: 8px;
@@ -216,11 +281,69 @@ img.logo{
     border-radius: 16px;
 }
 
+.work .title{
+    padding: 5% 0;
+}
+
 .work h1.nomeprogetto {
     width: 100%;
     text-align: center;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 5em;
 }
 .work p.descprogetto {
+    margin-top: 0;
     width: 100%;
     text-align: center;
+}
+
+.work .back {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    background-color: white;
+    border-bottom: 1px solid #0b1e2f38;
+    padding: 24px 0;
+}
+.work a.backhome {
+    display: flex;
+    color: #0b1e2f;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.work .descprogettodue {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 2% 0;
+    width: 70%;
+    text-align: center;
+    margin: auto;
+}
+
+.work .nextproj {
+    padding: 24px 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    border-bottom: 1px solid #0b1e2f38;
+}
+.nextproj span {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.work .nextproj a {
+    font-size: 2em;
+    color: black;
+    margin-bottom: 0;
 }
