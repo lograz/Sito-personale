@@ -375,3 +375,31 @@ background-size: cover;
     color: black;
     margin-bottom: 0;
 }
+
+.work .live h4 {
+    font-weight: 700;
+}
+
+.card.live {
+    background-image: url(../img/live.png);
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: luminosity;
+    display: flex;
+    background-color: #82E631;
+    border-radius: 16px;
+    padding: 32px;
+    box-sizing: border-box;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    transform: scale(1);
+    transition: all 0.5s;
+}
+.card.live:hover {
+    transform: scale(0.99);
+    transition: all 0.3s;
+}
+
