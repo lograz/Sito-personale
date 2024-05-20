@@ -414,6 +414,26 @@ background-size: cover;
     width: 100%;
     border-radius: 16px;
 }
+ul {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+   
+    padding: 0;
+    
+}
+li {
+    font-size: 14px;
+    font-weight: 700;
+    
+}
+li a {
+   
+    color: #071a2b !important;
+}
+.row.footer {
+    align-items: center;
+}
 
 @media screen and (max-width: 800px) {
     .chi-sono h2 {
