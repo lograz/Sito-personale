@@ -25,10 +25,12 @@
     
 }
 .loaderani {
+    top: -100vh;
     opacity: 0;
     transition: all 0.8s;
     
 }
+
 
 
 @keyframes spin {
@@ -97,6 +99,8 @@ small,
 }
 
 .container {
+    opacity: 0;
+    
     max-width: 1440px;
     margin: auto;
     display: flex;
@@ -107,6 +111,12 @@ small,
     align-items: flex-start;
     padding: 22px;
     gap: 22px;
+}
+.contentani{
+    display: flex;
+   
+    opacity: 1;
+transition: all 0.9s;
 }
 .row {
     width: 100%;
