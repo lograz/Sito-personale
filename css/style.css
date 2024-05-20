@@ -94,10 +94,50 @@ img.logo{
 
 .project .evidenza{
     
+    position: relative;
+    background-color: #035db3;
+    overflow: hidden;
     background-image: url(../img/evidenza/system-management.jpg);
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.zoom-in,
+.zoom-out {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    background-size: cover;
+    transform-origin: center;
+    transition: transform .4s ease-in-out;
+  }
+}
+
+.zoom-in {
+  &:focus,
+  &:hover {
+    &::after {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.zoom-out {
+  &::after {
+    transform: scale(1.05);
+  }
+  
+  &:focus,
+  &:hover {
+    &::after {
+      transform: scale(1);
+    }
+  }
 }
 @media screen and (max-width: 1005px) {
     .project .evidenza {
@@ -151,7 +191,7 @@ img.logo{
     color: white;
     
     transform: rotate(-45deg);
-    transition: all 0.5 ease-in-out;
+    transition: all 0.5s ease-in-out;
  }
  .desc_progetto h6 {
     margin-bottom: 0;
@@ -161,4 +201,19 @@ img.logo{
 }
 .desc_progetto h4 {
     margin-top: 8px;
+}
+
+
+.work img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.work h1.nomeprogetto {
+    width: 100%;
+    text-align: center;
+}
+.work p.descprogetto {
+    width: 100%;
+    text-align: center;
 }

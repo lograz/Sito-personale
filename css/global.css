@@ -113,7 +113,7 @@ small,
     gap: 22px;
 }
 .contentani{
-    display: flex;
+    
    
     opacity: 1;
 transition: all 0.9s;
