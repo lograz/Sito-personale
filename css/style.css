@@ -9,8 +9,8 @@
     transition: all 0.4s;
 }
 a.col.card.ani:hover {
-    transform: scale(0.99);
-    transition: all 0.4s;
+    transform: scale(0.98) !important;
+    transition: all 0.4s !important;
 }
 .chi-sono {
     width: 60%;
