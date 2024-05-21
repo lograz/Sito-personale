@@ -64,26 +64,26 @@
   </a>
 </div>
 
-<div class="row uno">
+<div class="row collo uno">
 <img src="img/megaapp/cover.png" alt="" srcset="">
     
 </div>
 
-<div class="row due descprogettodue">
+<div class="row collo due descprogettodue">
   <h4>Ho sviluppato una proposta di restyling UI/UX per l'app mobile MegaApp, utilizzata dai supermercati Dok e Famila. Il progetto ha incluso la modernizzazione del design, l'ottimizzazione della navigazione e l'introduzione di nuove funzionalità interattive per migliorare l'esperienza utente. L'obiettivo era rendere l'app più intuitiva e user-friendly, facilitando l'accesso alle offerte, promozioni e informazioni sui prodotti per i clienti.</h4>
       
   </div>
 
   <div class="row tre">
-    <div class="col"><img src="img/megaapp/1.png" alt=""></div>
-      <div class="col"><img src="img/megaapp/2.png" alt=""></div>
-      <div class="col"><img src="img/megaapp/3.png" alt=""></div>
+    <div class="col collo"><img src="img/megaapp/1.png" alt=""></div>
+      <div class="col collo"><img src="img/megaapp/2.png" alt=""></div>
+      <div class="col collo"><img src="img/megaapp/3.png" alt=""></div>
         
     </div>
 
  
 
-      <div class="row cinque nextproj">
+      <div class="row collo cinque nextproj">
         <span>next project</span>
         <a href="systemmanagement.html">System Management</a>
       </div>
@@ -105,13 +105,18 @@
 <script src="js/script.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script>
-  ScrollReveal().reveal('.uno');
-  ScrollReveal().reveal('.due');
-  ScrollReveal().reveal('.tre');
-  ScrollReveal().reveal('.quattro')
-  ScrollReveal().reveal('.cinque');
-  ScrollReveal().reveal('.sei');
-  
+  ScrollReveal().reveal('.collo', {
+    
+    scale: 0.85,
+            delay: 500,
+            useDelay: 'onload',
+            reset: true,
+        })
+
+        ScrollReveal().reveal('.collo:first-child ', {
+            delay: 0,
+            interval: 200
+        })
 </script>
 
 

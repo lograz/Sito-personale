@@ -40,18 +40,18 @@
   </span>Torna alla home</a>
 </div>
 
-<div class="row title">
+<div class="row title collo">
     <h1 class="nomeprogetto">GEEBA</h1>
     <p class="descprogetto">Timesheet mobile application</p>
     
 </div>
 
-<div class="row">
-    <div class="col card">
+<div class="row collo">
+    <div class="col  card">
         <div class="badge text-caption">CLIENTE</div>
         <h4 style="margin-bottom: 0;">System Management</h4>
     </div>
-    <div class="col card">
+    <div class="col  card">
         <div class="badge text-caption">ANNO</div>
         <h4 style="margin-bottom: 0;">2022</h4>
     </div>
@@ -64,7 +64,7 @@
   </a>
 </div>
 
-<div class="row uno">
+<div class="row uno collo">
 <img src="img/geeba/ cover.png" alt="" srcset="">
     
 </div>
@@ -75,21 +75,21 @@
   </div>
 
   <div class="row tre">
-    <div class="col"><img src="img/geeba/1.png" alt=""></div>
-      <div class="col"><img src="img/geeba/2.png" alt=""></div>
-      <div class="col"><img src="img/geeba/3.png" alt=""></div>
+    <div class="col collo"><img src="img/geeba/1.png" alt=""></div>
+      <div class="col collo"><img src="img/geeba/2.png" alt=""></div>
+      <div class="col collo"><img src="img/geeba/3.png" alt=""></div>
         
     </div>
 
     <div class="row quattro">
-      <div class="col"><img src="img/geeba/5.png" alt=""></div>
-      <div class="col"><img src="img/geeba/6.png" alt=""></div>
-      <div class="col"><img src="img/geeba/7.png" alt=""></div>
+      <div class="col collo"><img src="img/geeba/5.png" alt=""></div>
+      <div class="col collo"><img src="img/geeba/6.png" alt=""></div>
+      <div class="col collo"><img src="img/geeba/7.png" alt=""></div>
      
           
       </div>
 
-      <div class="row cinque nextproj">
+      <div class="row collo cinque nextproj">
         <span>next project</span>
         <a href="dylandog.html">Dylan Dog Collect</a>
       </div>
@@ -111,14 +111,18 @@
 <script src="js/script.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script>
-  ScrollReveal().reveal('.uno');
-  ScrollReveal().reveal('.due');
-  ScrollReveal().reveal('.tre');
-  ScrollReveal().reveal('.quattro')
-  ScrollReveal().reveal('.cinque');
-  ScrollReveal().reveal('.sei');
-  
-</script>
+  ScrollReveal().reveal('.collo', {
+    
+    scale: 0.85,
+            delay: 500,
+            useDelay: 'onload',
+            reset: true,
+        })
 
+        ScrollReveal().reveal('.collo:first-child ', {
+            delay: 0,
+            interval: 200
+        })
+</script>
 
     </body>

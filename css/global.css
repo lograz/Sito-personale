@@ -132,3 +132,6 @@ transition: all 0.9s;
 .col{
     flex-grow: 1;
 }
+footer-custom {
+  width: 100%;
+}

@@ -506,14 +506,14 @@ li a {
     justify-content: center;
     align-items: center;
     position: relative;
-    transition: all 0.30s;
+    transition: all 0.30s !important;
   }
   .cards_uno .card_due.chi-sono-due {
    
     width: 60%;
   }
   .cards_uno .card_due:hover {
-    transform: scale(0.99);
+    transform: scale(0.98) !important;
   }
   .cards_uno .card_due:hover::before {
     opacity: 1;
@@ -528,19 +528,19 @@ li a {
     border-radius: inherit;
     background: radial-gradient(60rem circle at var(--xPos) var(--yPos), #82e63100, transparent 35%);
     opacity: 0;
-    transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out !important;
   }
-  .cards .card_due .card-content {
+  .cards_uno .card_due .card-content {
     padding: 32px;
     background-color: #E6EFF8;
     border-radius: 14px;
-    transition: all 0.25s;
+    transition: all 0.25s !important;
     height: calc(100% - 6px);
     width: calc(100% - 6px);
     box-sizing: border-box;
   }
   
-  .cards .card_due .card-content.chi-sono {
+  .cards_uno .card_due .card-content.chi-sono {
     padding: 32px;
     background-color: #E6EFF8;
     border-radius: 14px;
@@ -549,6 +549,18 @@ li a {
     width: calc(100% - 6px);
     box-sizing: border-box;
   }
+  .collo.col.tre.card.all:hover {
+    transform: scale(0.98) !important;
+}
+.collo.col.card.cique.awards:hover {
+    transform: scale(0.98) !important;
+}
+.collo.col.tre.card.all {
+    transition: all 0.30s !important;
+}
+.collo.col.card.cique.awards{
+    transition: all 0.30s !important;
+}
 
 
   

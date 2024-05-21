@@ -40,13 +40,13 @@
   </span>Torna alla home</a>
 </div>
 
-<div class="row title">
+<div class="row collo title">
     <h1 class="nomeprogetto">System Management</h1>
     <p class="descprogetto">Company website</p>
     
 </div>
 
-<div class="row">
+<div class="row collo">
     <div class="col card">
         <div class="badge text-caption">CLIENTE</div>
         <h4 style="margin-bottom: 0;">System Management</h4>
@@ -64,22 +64,22 @@
   </a>
 </div>
 
-<div class="row uno">
+<div class="row collo uno">
 <img src="img/sm/cover.png" alt="" srcset="">
     
 </div>
 
-<div class="row due descprogettodue">
+<div class="row collo due descprogettodue">
   <h4>Ho curato la UI/UX e lo sviluppo del sito web per System Management con WordPress Elementor, creando un'esperienza utente intuitiva e un design moderno. Il progetto ha incluso la realizzazione di una navigazione ottimale, sezioni informative ben strutturate e funzionalità interattive per migliorare l'engagement degli utenti e la facilità di accesso alle informazioni.</h4>
       
   </div>
 
-  <div class="row tre">
+  <div class="row collo tre">
     <img src="img/sm/1.png" alt="" srcset="">
         
     </div>
 
-    <div class="row quattro">
+    <div class="row collo quattro">
       <video controls autoplay >
         <source src="img/sm/2.mp4" type="video/mp4">
         
@@ -112,14 +112,18 @@
 <script src="js/script.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script>
-  ScrollReveal().reveal('.uno');
-  ScrollReveal().reveal('.due');
-  ScrollReveal().reveal('.tre');
-  ScrollReveal().reveal('.quattro')
-  ScrollReveal().reveal('.cinque');
-  ScrollReveal().reveal('.sei');
-  
-</script>
+  ScrollReveal().reveal('.collo', {
+    
+    scale: 0.85,
+            delay: 500,
+            useDelay: 'onload',
+            reset: true,
+        })
 
+        ScrollReveal().reveal('.collo:first-child ', {
+            delay: 0,
+            interval: 200
+        })
+</script>
 
     </body>

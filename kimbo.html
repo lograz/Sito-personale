@@ -46,7 +46,7 @@
     
 </div>
 
-<div class="row">
+<div class="row collo">
     <div class="col card">
         <div class="badge text-caption">CLIENTE</div>
         <h4 style="margin-bottom: 0;">Kimbo</h4>
@@ -64,31 +64,31 @@
   </a>
 </div>
 
-<div class="row uno">
+<div class="row uno collo">
 <img src="img/kimbo/cover.png" alt="" srcset="">
     
 </div>
 
-<div class="row due descprogettodue">
+<div class="row collo due descprogettodue">
   <h4>Ho sviluppato una proposta di restyling UI/UX per il sito web di Kimbo. Il progetto ha incluso la modernizzazione del design, l'ottimizzazione della navigazione e l'introduzione di nuove funzionalità interattive per migliorare l'esperienza utente. L'obiettivo era rendere il sito più intuitivo e user-friendly, facilitando l'accesso alle informazioni sui prodotti, le promozioni e la storia del marchio per i clienti.</h4>
       
   </div>
 
-  <div class="row tre">
+  <div class="row collo tre">
     <img src="img/kimbo/1.png" alt="" srcset="">
         
     </div>
 
-    <div class="row quattro">
+    <div class="row collo quattro">
       <img src="img/kimbo/2.png" alt="" srcset="">
           
       </div>
-      <div class="row quattro">
+      <div class="row collo quattro">
         <img src="img/kimbo/3.png" alt="" srcset="">
             
         </div>
 
-      <div class="row cinque nextproj">
+      <div class="row collo cinque nextproj">
         <span>next project</span>
         <a href="megaapp.html">MegaApp</a>
       </div>
@@ -110,13 +110,18 @@
 <script src="js/script.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script>
-  ScrollReveal().reveal('.uno');
-  ScrollReveal().reveal('.due');
-  ScrollReveal().reveal('.tre');
-  ScrollReveal().reveal('.quattro')
-  ScrollReveal().reveal('.cinque');
-  ScrollReveal().reveal('.sei');
-  
+  ScrollReveal().reveal('.collo', {
+    
+    scale: 0.85,
+            delay: 500,
+            useDelay: 'onload',
+            reset: true,
+        })
+
+        ScrollReveal().reveal('.collo:first-child ', {
+            delay: 0,
+            interval: 200
+        })
 </script>
 
 

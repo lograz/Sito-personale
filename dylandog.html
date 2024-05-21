@@ -40,22 +40,22 @@
   </span>Torna alla home</a>
 </div>
 
-<div class="row title">
+<div class="row title collo">
     <h1 class="nomeprogetto">Dylan Dog Collect</h1>
     <p class="descprogetto">Applicazione mobile per la collezione di fumetti</p>
     
 </div>
 
-<div class="row">
-    <div class="col card">
+<div class="row collo">
+    <div class="collo col card">
         <div class="badge text-caption">CLIENTE</div>
         <h4 style="margin-bottom: 0;">Progetto personale</h4>
     </div>
-    <div class="col card">
+    <div class="collo col card">
         <div class="badge text-caption">ANNO</div>
         <h4 style="margin-bottom: 0;">2021</h4>
     </div>
-    <a href="https://www.figma.com/proto/dt6WLdU9Q902B6ETiKXw6z/Dylan-Dog-Collectible?page-id=71%3A1758&node-id=71-2432&viewport=292%2C683%2C0.12&t=FnfpKy6BoCXHXrEJ-1&scaling=scale-down&starting-point-node-id=71%3A2474" target="_blank" class="col card live">
+    <a href="https://www.figma.com/proto/dt6WLdU9Q902B6ETiKXw6z/Dylan-Dog-Collectible?page-id=71%3A1758&node-id=71-2432&viewport=292%2C683%2C0.12&t=FnfpKy6BoCXHXrEJ-1&scaling=scale-down&starting-point-node-id=71%3A2474" target="_blank" class="collo col card live">
       <h4>Vai al prototipo!</h4><div class="button">
         <span class="material-symbols-outlined"> arrow_forward </span>
       </div>
@@ -64,7 +64,7 @@
   </a>
 </div>
 
-<div class="row uno">
+<div class="row uno collo">
 <img src="img/dd/cover.png" alt="" srcset="">
     
 </div>
@@ -75,32 +75,32 @@
   </div>
 
   <div class="row tre">
-    <div class="col"><img src="img/dd/1.png" alt=""></div>
-    <div class="col"><img src="img/dd/2.png" alt=""></div>
-    <div class="col"><img src="img/dd/3.png" alt=""></div>
+    <div class="col collo"><img src="img/dd/1.png" alt=""></div>
+    <div class="col collo"><img src="img/dd/2.png" alt=""></div>
+    <div class="col collo"><img src="img/dd/3.png" alt=""></div>
         
     </div>
 
     <div class="row quattro">
-      <div class="col"><img src="img/dd/4.png" alt=""></div>
-    <div class="col"><img src="img/dd/5.png" alt=""></div>
-    <div class="col"><img src="img/dd/6.png" alt=""></div>
+      <div class="col collo"><img src="img/dd/4.png" alt=""></div>
+    <div class="col collo"><img src="img/dd/5.png" alt=""></div>
+    <div class="col collo"><img src="img/dd/6.png" alt=""></div>
           
       </div>
       <div class="row quattro">
-        <div class="col"><img src="img/dd/7.png" alt=""></div>
-        <div class="col"><img src="img/dd/8.png" alt=""></div>
-        <div class="col"><img src="img/dd/9.png" alt=""></div>
+        <div class="col collo"><img src="img/dd/7.png" alt=""></div>
+        <div class="col collo"><img src="img/dd/8.png" alt=""></div>
+        <div class="col collo"><img src="img/dd/9.png" alt=""></div>
             
         </div>
 
-      <div class="row cinque nextproj">
+      <div class="row collo cinque nextproj">
         <span>next project</span>
         <a href="kimbo.html">Kimbo</a>
       </div>
 
 
-      <div class="row footer">
+      <div class="row  collo footer">
         <div class="col-8">
           <span>Designed and Developed by me (Lorenzo Gravina) with Figma, HTML, CSS and JS</span>
         </div>
@@ -116,13 +116,18 @@
 <script src="js/script.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script>
-  ScrollReveal().reveal('.uno');
-  ScrollReveal().reveal('.due');
-  ScrollReveal().reveal('.tre');
-  ScrollReveal().reveal('.quattro')
-  ScrollReveal().reveal('.cinque');
-  ScrollReveal().reveal('.sei');
-  
+  ScrollReveal().reveal('.collo', {
+    
+    scale: 0.85,
+            delay: 500,
+            useDelay: 'onload',
+            reset: true,
+        })
+
+        ScrollReveal().reveal('.collo:first-child ', {
+            delay: 0,
+            interval: 200
+        })
 </script>
 
 

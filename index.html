@@ -47,8 +47,8 @@
 
 
         <div class="cards_uno">
-          <div class="card_due chi-sono-due">
-            <div class="card-content chi-sono">
+          <div class="collo card_due chi-sono-due">
+            <div class="card-content chi-sono uno">
               <div class="badge text-caption">CHI SONO</div>
               <img src="img/lorenzo-gravina.png" alt="">
               <h2>Ciao! sono un designer creativo di Napoli con una passione per la realizzazione di esperienze utente intuitive e interfacce utente accattivanti.</h2>
@@ -59,8 +59,8 @@
 
             </div>
           </div>
-          <div class="card_due">
-            <div class="card-content competenza">
+          <div class="collo card_due">
+            <div class="card-content competenza due">
               <div class="badge text-caption">COMPETENZE</div>
           <div class="row lista-competenza">
             <h4>UI Design</h4>
@@ -114,8 +114,20 @@
         </div>-->
         <!---->
       </div>
+
+
+     <!--progetti-->
+
       <div class="row project">
-        <div class="col tre card all">
+
+       
+       
+         
+
+
+
+
+        <div class="collo col tre card all">
           <div class="badge text-caption">PROGETTi</div>
           <a href="geeba.html">
             <div class="row lista-awards">
@@ -187,7 +199,7 @@
           </a>-->
         </div>
         
-        <a href="systemmanagement.html" class="col card quattro evidenza zoom-in">
+        <a href="systemmanagement.html" class="collo col card quattro evidenza zoom-in">
           
             
               <div class="badge text-caption">ULTIMO PROGETTO</div>
@@ -197,7 +209,7 @@
     
       </div>
       <div class="row cta">
-        <div class="col card cique awards ">
+        <div class="collo col card cique awards ">
           <div class="badge text-caption">awards</div>
           <a href="https://www.awwwards.com/sites/system-management" target="_blank">
             <div class="row lista-awards">
@@ -216,14 +228,14 @@
             </div>
           </a>
         </div>
-        <a href="img/lgravina_cv.pdf" class="col card cv ani" target="_blank">
+        <a href="img/lgravina_cv.pdf" class="col collo card cv ani" target="_blank">
             <div class="badge text-caption">cv</div>
             <h2>Scarica il<br>Curriculum Vitae</h2>
             <div class="button download">
                 <span class="material-symbols-outlined"> arrow_forward </span>
               </div>
         </a>
-        <a href="#tally-open=mRzNkv&tally-overlay=1&tally-auto-close=2000"class="col card sette contact ani">
+        <a href="#tally-open=mRzNkv&tally-overlay=1&tally-auto-close=2000"class="col collo card sette contact ani">
           <div class="badge text-caption inverse">contact</div>
          <h2>Conosciamoci!</h2><div class="button">
             <span class="material-symbols-outlined"> arrow_forward </span>
@@ -235,13 +247,21 @@
     <script src="js/script.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script>
-      ScrollReveal().reveal('.uno');
-      ScrollReveal().reveal('.due');
-      ScrollReveal().reveal('.tre');
-      ScrollReveal().reveal('.quattro')
-      ScrollReveal().reveal('.cinque');
-      ScrollReveal().reveal('.sei');
-      ScrollReveal().reveal('.sette');
+      
+    </script>
+    <script>
+      ScrollReveal().reveal('.row .collo', {
+        
+        scale: 0.85,
+                delay: 500,
+                useDelay: 'onload',
+                reset: true,
+            })
+
+            ScrollReveal().reveal('.row .collo:first-child ', {
+                delay: 0,
+                interval: 200
+            })
     </script>
     <script async src="https://tally.so/widgets/embed.js"></script>
 
