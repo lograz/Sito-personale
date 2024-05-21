@@ -12,7 +12,7 @@ a.col.card.ani:hover {
     transform: scale(0.99);
     transition: all 0.4s;
 }
-.col.card.uno.chi-sono {
+.chi-sono {
     width: 60%;
 }
 .col.card.quattro.evidenza {
@@ -112,6 +112,15 @@ background-size: cover;
     margin-bottom: 44px;
     font-weight: 700;
 }
+.cards_uno .badge {
+    color:#0C1E2F;
+    background-color: #82E631;
+    width: fit-content;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin-bottom: 44px;
+    font-weight: 700;
+}
 .card.evidenza .badge {
     color:#0C1E2F;
     position: absolute;
@@ -132,7 +141,7 @@ background-size: cover;
     margin-bottom: 44px;
     font-weight: 700;
 }
-.card img {
+.chi-sono img {
     height: 96px;
     border-radius: 100px;
 }
@@ -140,7 +149,7 @@ background-size: cover;
     font-weight: 400;
     color: #323940;
 }
-.card .dot {
+.chi-sono .dot {
     width: 12px;
     height: 12px;
     background-color: #81e630;
@@ -472,6 +481,73 @@ li a {
     .work .col{
         width: inherit;
     }
+  }
+
+  .cards_uno {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 22px;
+    width: 100%;
+    flex-wrap: wrap;
+    
+    align-content:space-between;
+    flex-direction: row;
+}
+  .cards_uno:hover .card_due {
+    background: radial-gradient(100rem circle at var(--xPos) var(--yPos),#82E631, transparent 15%);
+  }
+  .cards_uno .card_due {
+    flex-grow: 1;
+   
+    background: radial-gradient(150rem circle at 0 0,#82E631, transparent 0%);
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.30s;
+  }
+  .cards_uno .card_due.chi-sono-due {
+   
+    width: 60%;
+  }
+  .cards_uno .card_due:hover {
+    transform: scale(0.99);
+  }
+  .cards_uno .card_due:hover::before {
+    opacity: 1;
+  }
+  .cards_uno .card_due::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    background: radial-gradient(60rem circle at var(--xPos) var(--yPos), #82e63100, transparent 35%);
+    opacity: 0;
+    transition: all 0.30s ease-in-out;
+  }
+  .cards .card_due .card-content {
+    padding: 32px;
+    background-color: #E6EFF8;
+    border-radius: 14px;
+    transition: all 0.25s;
+    height: calc(100% - 6px);
+    width: calc(100% - 6px);
+    box-sizing: border-box;
+  }
+  
+  .cards .card_due .card-content.chi-sono {
+    padding: 32px;
+    background-color: #E6EFF8;
+    border-radius: 14px;
+    transition: all 0.25s;
+    height: calc(100% - 6px);
+    width: calc(100% - 6px);
+    box-sizing: border-box;
   }
 
 
