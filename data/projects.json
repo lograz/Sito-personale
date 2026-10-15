@@ -1,0 +1,218 @@
+[
+  {
+    "slug": "systemmanagement",
+    "title": "System Management",
+    "summary": "Il sito istituzionale di un gruppo IT che porta le aziende nel phygital.",
+    "kind": "Sito web",
+    "client": "System Management",
+    "year": "2024",
+    "role": "UI/UX design e sviluppo WordPress",
+    "status": "Online",
+    "accent": "#1453D6",
+    "cover": "img/work/sm/cover.webp",
+    "link": {
+      "label": "Visita il sito",
+      "url": "https://www.sysmanagement.it/"
+    },
+    "recognition": [
+      {
+        "label": "Nominee Awwwards",
+        "url": "https://www.awwwards.com/sites/system-management"
+      },
+      {
+        "label": "Nominee CSS Winner",
+        "url": "https://www.csswinner.com/details/system-management/18043"
+      }
+    ],
+    "problem": "",
+    "work": "Ho progettato e sviluppato il sito di System Management con WordPress ed Elementor: architettura dei contenuti, navigazione, sistema visivo e le animazioni che accompagnano la lettura. L'obiettivo era far capire in pochi secondi cosa fa il gruppo e portare chi visita alle soluzioni giuste.",
+    "outcome": "Il sito è stato nominato su Awwwards e CSS Winner.",
+    "gallery": [
+      {
+        "src": "img/work/sm/1.webp",
+        "alt": "Homepage di System Management su desktop",
+        "wide": true
+      },
+      {
+        "video": "img/work/sm/2.mp4",
+        "poster": "img/work/sm/2-poster.jpg",
+        "alt": "Navigazione animata del sito System Management",
+        "wide": true
+      },
+      {
+        "src": "img/work/sm/3.webp",
+        "alt": "Pagine interne del sito System Management",
+        "wide": true
+      }
+    ]
+  },
+  {
+    "slug": "geeba",
+    "title": "Geeba",
+    "summary": "L'app con cui i dipendenti timbrano e registrano le ore sulle commesse.",
+    "kind": "App mobile",
+    "client": "System Management",
+    "year": "2022",
+    "role": "UI/UX design",
+    "status": "Prodotto interno",
+    "accent": "#0B3B9A",
+    "cover": "img/work/geeba/cover.webp",
+    "link": null,
+    "recognition": [],
+    "problem": "",
+    "work": "Ho progettato l'interfaccia di un'app per registrare le ore lavorate, gestire i turni e tenere traccia del tempo dedicato a ogni progetto. La timbratura è un solo bottone in home, il timesheet è una lista di commesse da compilare in pochi secondi, ogni commessa ha un colore personalizzabile e il totale delle ore resta sempre visibile.",
+    "outcome": "",
+    "gallery": [
+      {
+        "src": "img/work/geeba/1.webp",
+        "alt": "Home di Geeba prima della timbratura"
+      },
+      {
+        "src": "img/work/geeba/2.webp",
+        "alt": "Selezione dell'orario di ingresso"
+      },
+      {
+        "src": "img/work/geeba/3.webp",
+        "alt": "Home dopo la timbratura di ingresso"
+      },
+      {
+        "src": "img/work/geeba/5.webp",
+        "alt": "Lista delle commesse nel timesheet"
+      },
+      {
+        "src": "img/work/geeba/6.webp",
+        "alt": "Scelta del colore di una commessa"
+      },
+      {
+        "src": "img/work/geeba/7.webp",
+        "alt": "Commessa evidenziata con il colore scelto"
+      }
+    ]
+  },
+  {
+    "slug": "dylandog",
+    "title": "Dylan Dog Collect",
+    "summary": "Un'app per catalogare la propria collezione di albi di Dylan Dog.",
+    "kind": "App mobile",
+    "client": "Progetto personale",
+    "year": "2021",
+    "role": "UI/UX design",
+    "status": "Concept",
+    "accent": "#B3121B",
+    "cover": "img/work/dd/cover.webp",
+    "link": {
+      "label": "Apri il prototipo",
+      "url": "https://www.figma.com/proto/dt6WLdU9Q902B6ETiKXw6z/Dylan-Dog-Collectible?page-id=71%3A1758&node-id=71-2432&viewport=292%2C683%2C0.12&t=FnfpKy6BoCXHXrEJ-1&scaling=scale-down&starting-point-node-id=71%3A2474"
+    },
+    "recognition": [],
+    "problem": "",
+    "work": "Ho progettato un'app per i collezionisti di Dylan Dog: catalogare e gestire la propria collezione, scoprire nuovi albi e mettersi in contatto con altri appassionati, con un'interfaccia che riprende l'atmosfera del fumetto senza sacrificare la leggibilità.",
+    "outcome": "",
+    "gallery": [
+      {
+        "src": "img/work/dd/1.webp",
+        "alt": "Schermata dell'app Dylan Dog Collect"
+      },
+      {
+        "src": "img/work/dd/2.webp",
+        "alt": "Schermata dell'app Dylan Dog Collect"
+      },
+      {
+        "src": "img/work/dd/3.webp",
+        "alt": "Schermata dell'app Dylan Dog Collect"
+      },
+      {
+        "src": "img/work/dd/4.webp",
+        "alt": "Schermata dell'app Dylan Dog Collect"
+      },
+      {
+        "src": "img/work/dd/5.webp",
+        "alt": "Schermata dell'app Dylan Dog Collect"
+      },
+      {
+        "src": "img/work/dd/6.webp",
+        "alt": "Schermata dell'app Dylan Dog Collect"
+      },
+      {
+        "src": "img/work/dd/7.webp",
+        "alt": "Schermata dell'app Dylan Dog Collect"
+      },
+      {
+        "src": "img/work/dd/8.webp",
+        "alt": "Schermata dell'app Dylan Dog Collect"
+      },
+      {
+        "src": "img/work/dd/9.webp",
+        "alt": "Schermata dell'app Dylan Dog Collect"
+      }
+    ]
+  },
+  {
+    "slug": "kimbo",
+    "title": "Kimbo",
+    "summary": "Una proposta di restyling per l'e-commerce del caffè napoletano.",
+    "kind": "Sito e-commerce",
+    "client": "Kimbo",
+    "year": "2022",
+    "role": "UI/UX design",
+    "status": "Concept",
+    "accent": "#A4161A",
+    "cover": "img/work/kimbo/cover.webp",
+    "link": {
+      "label": "Apri il prototipo",
+      "url": "https://www.figma.com/proto/4IeWFIZdvLcECkAvYSvn9J/%5BKIMBO%5D-e-commerce?page-id=0%3A1&node-id=86-12611&starting-point-node-id=86%3A12611&show-proto-sidebar=1&t=x6GecvbesYWVS8TE-1"
+    },
+    "recognition": [],
+    "problem": "",
+    "work": "Ho ripensato il sito di Kimbo con un design più moderno e una navigazione più corta: informazioni sui prodotti più facili da trovare, promozioni in evidenza e uno spazio dedicato alla storia del marchio.",
+    "outcome": "",
+    "gallery": [
+      {
+        "src": "img/work/kimbo/1.webp",
+        "alt": "Homepage della proposta per Kimbo",
+        "wide": true
+      },
+      {
+        "src": "img/work/kimbo/2.webp",
+        "alt": "Pagina prodotto della proposta per Kimbo",
+        "wide": true
+      },
+      {
+        "src": "img/work/kimbo/3.webp",
+        "alt": "Pagina della storia del marchio nella proposta per Kimbo",
+        "wide": true
+      }
+    ]
+  },
+  {
+    "slug": "megaapp",
+    "title": "MegaApp",
+    "summary": "Una proposta di restyling per l'app dei supermercati Dok e Famila.",
+    "kind": "App mobile",
+    "client": "Dok & Famila",
+    "year": "2021",
+    "role": "UI/UX design",
+    "status": "Concept",
+    "accent": "#E2001A",
+    "cover": "img/work/megaapp/cover.webp",
+    "link": null,
+    "recognition": [],
+    "problem": "",
+    "work": "Ho riprogettato l'app dei supermercati Dok e Famila per rendere più rapido l'accesso a offerte, promozioni e informazioni sui prodotti, con una navigazione più semplice e nuove interazioni.",
+    "outcome": "",
+    "gallery": [
+      {
+        "src": "img/work/megaapp/1.webp",
+        "alt": "Home della proposta MegaApp"
+      },
+      {
+        "src": "img/work/megaapp/2.webp",
+        "alt": "Offerte nella proposta MegaApp"
+      },
+      {
+        "src": "img/work/megaapp/3.webp",
+        "alt": "Dettaglio prodotto nella proposta MegaApp"
+      }
+    ]
+  }
+]

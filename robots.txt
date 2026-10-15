@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lorenzogravina.vercel.app/sitemap.xml

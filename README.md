@@ -1,85 +1,35 @@
-# 🎨 Lorenzo Gravina - Portfolio
+# Lorenzo Gravina — portfolio
 
-Benvenuto nel repository del sito portfolio di **Lorenzo Gravina**, designer UI e UX. Questo progetto è stato creato interamente da me utilizzando HTML, CSS e JavaScript.
+Sito personale statico: HTML, CSS e JavaScript senza dipendenze. Online su [lorenzogravina.vercel.app](https://lorenzogravina.vercel.app/).
 
-## 📑 Indice
-
-- [📖 Descrizione](#descrizione)
-- [🌐 Demo](#demo)
-- [✨ Caratteristiche](#caratteristiche)
-- [⚙️ Installazione](#installazione)
-- [🚀 Utilizzo](#utilizzo)
-- [📂 Struttura del progetto](#struttura-del-progetto)
-- [💻 Tecnologie utilizzate](#tecnologie-utilizzate)
-- [📬 Contatti](#contatti)
-- [📄 Licenza](#licenza)
-
-## 📖 Descrizione
-
-Questo sito web rappresenta il mio portfolio personale come designer UI e UX. Il sito contiene una selezione dei miei lavori, una biografia, informazioni sui servizi offerti e un modulo di contatto con Tally. Lo scopo di questo progetto è di mostrare le mie competenze e fornire un punto di contatto per potenziali clienti o datori di lavoro.
-
-## 🌐 Demo
-
-Puoi visitare il sito web all'indirizzo [lorenzogravina.vercel.app](https://lorenzogravina.vercel.app/).
-
-## ✨ Caratteristiche
-
-- **📱 Design responsivo**: Il sito è ottimizzato per dispositivi desktop e mobile.
-- **🎨 Animazioni CSS**: Utilizzo di transizioni e animazioni per migliorare l'esperienza utente.
-- **✉️ Modulo di contatto**: Modulo integrato per permettere ai visitatori di contattarmi direttamente dal sito tramite tally.
-
-## ⚙️ Installazione
-
-Per eseguire questo progetto in locale, segui questi passaggi:
-
-1. **Clona il repository**
-
-   ```bash
-   [git clone https://github.com/tuo-username/portfolio-lorenzogravina.git](https://github.com/lograz/Sito-personale.git)
-   ```
-
-2. **Naviga nella directory del progetto**
-
-   ```bash
-   cd Sito-personale
-   ```
-
-3. **Apri il file `index.html` nel tuo browser preferito**
-
-## 🚀 Utilizzo
-
-Una volta installato, puoi aprire il sito nel tuo browser per visualizzare il portfolio. Modifica i file HTML, CSS e JS secondo le tue necessità per aggiornare i contenuti o il design del sito.
-
-## 📂 Struttura del progetto
+## Struttura
 
 ```
-portfolio-lorenzogravina/
-│
-├── index.html
-├── css/
-│   └── styles.css
-│   └── global.css
-│   └── normalize.css
-├── js/
-│   └── scripts.js
-├── images/
-│   └── (file di immagini)
-└── README.md
+index.html              home (generata)
+<progetto>.html         case study (generati)
+data/projects.json      contenuti dei progetti: si modifica qui
+build.py                genera le pagine da projects.json
+css/site.css            stile (token colore in :root)
+css/fonts.css           font self-hosted (Bricolage Grotesque, Instrument Sans)
+js/site.js              interazioni: ingresso, anteprima lavori, copia email
+img/                    immagini in WebP
+AUDIT.md                audit UX/UI e contenuti del vecchio sito
 ```
 
-## 💻 Tecnologie utilizzate
+## Aggiungere o modificare un progetto
 
-- **HTML5**: Per la struttura del sito web.
-- **CSS3**: Per lo stile e il layout.
-- **JavaScript**: Per le funzionalità interattive.
+1. Metti le immagini in `img/work/<slug>/` (WebP, 1600px per cover e schermate desktop, 630px per schermate mobile).
+2. Aggiungi o modifica l'oggetto in `data/projects.json`. I campi `problem`, `outcome`, `link` e `recognition` sono facoltativi: se vuoti non vengono mostrati.
+3. Lancia `python3 build.py` e committa le pagine generate.
 
-## 📬 Contatti
+## In locale
 
-Per qualsiasi domanda o suggerimento, sentiti libero di contattarmi:
+```bash
+python3 -m http.server 8000
+```
 
-- **Email**: gravinalrn@gmail.com 
-- **LinkedIn**: [Lorenzo Gravina](https://www.linkedin.com/in/lorenzo-gravina-a4175037/)
+Poi apri http://localhost:8000.
 
-## 📄 Licenza
+## Contatti
 
-Questo progetto è concesso in licenza sotto i termini della licenza MIT. Vedi il file [LICENSE](LICENSE) per i dettagli.
+gravinalrn@gmail.com · [LinkedIn](https://www.linkedin.com/in/lorenzo-gravina-a4175037/)
