@@ -1,10 +1,36 @@
 {
   "cleanUrls": false,
   "redirects": [
-    { "source": "/img/lgravina_cv.pdf", "destination": "/lorenzo-gravina-cv.pdf", "permanent": true },
-    { "source": "/lgravina_cv.pdf", "destination": "/lorenzo-gravina-cv.pdf", "permanent": true }
+    {
+      "source": "/img/lgravina_cv.pdf",
+      "destination": "/lorenzo-gravina-cv.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/lgravina_cv.pdf",
+      "destination": "/lorenzo-gravina-cv.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/systemmanagement.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/systemmanagement",
+      "destination": "/",
+      "permanent": true
+    }
   ],
   "headers": [
-    { "source": "/(img|fonts)/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }] }
+    {
+      "source": "/(img|fonts)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
+    }
   ]
 }

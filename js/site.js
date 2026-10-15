@@ -143,7 +143,7 @@
     }, { target: cover, offset: ['start end', 'start 0.2'] });
   }
 
-  const shots = [...document.querySelectorAll('.gallery figure')];
+  const shots = [...document.querySelectorAll('.gallery figure, .story-figure')];
   if (useMotion && shots.length && M.inView) {
     const below = shots.filter(el => el.getBoundingClientRect().top > window.innerHeight * 0.9);
     below.forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(40px)'; });
@@ -152,7 +152,7 @@
       if (seen.has(el)) return;
       seen.add(el);
       // le schermate sulla stessa riga entrano in sequenza
-      const row = el.classList.contains('wide') ? 0 : shots.filter(s => !s.classList.contains('wide')).indexOf(el) % 3;
+      const row = (el.classList.contains('wide') || el.classList.contains('story-figure')) ? 0 : shots.filter(s => !s.classList.contains('wide')).indexOf(el) % 3;
       const anim = M.animate(el,
         { opacity: [0, 1], transform: ['translateY(40px)', 'translateY(0px)'] },
         { type: spring, bounce: 0.15, visualDuration: 0.6, delay: row * 0.09 });
