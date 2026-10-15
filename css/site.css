@@ -222,7 +222,7 @@ a { color: inherit; }
 .cs-facts dd { margin: 4px 0 0; font-weight: 600; }
 @media (max-width: 720px) { .cs-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .cs-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-.cs-cover { border-radius: var(--radius-lg); overflow: hidden; background: var(--accent, var(--mist)); }
+.cs-cover { border-radius: var(--radius-lg); overflow: hidden; background: var(--accent, var(--mist)); transform-origin: 50% 0; }
 .cs-cover img { width: 100%; }
 .cs-body { display: grid; grid-template-columns: 14rem minmax(0, 1fr); gap: 24px clamp(24px, 5vw, 80px); padding: clamp(48px, 8vw, 112px) 0; max-width: 1080px; }
 .cs-body h2 { font: 600 1rem/1.4 var(--font-body); color: var(--slate); margin: 6px 0 0; }
