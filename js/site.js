@@ -1,9 +1,29 @@
-// Lorenzo Gravina — site interactions (no dependencies)
+// Lorenzo Gravina — site interactions
+// Usa Motion (js/motion.min.js) se disponibile; senza, il sito resta completo con le transizioni CSS.
 (() => {
   const root = document.documentElement;
+  const M = window.Motion;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const useMotion = !!(M && M.animate && !reduce);
+  const spring = useMotion && M.spring;
+  if (useMotion) root.classList.add('has-motion');
 
-  // Entrance: content is visible without JS; with JS, play one orchestrated reveal.
-  const ready = () => requestAnimationFrame(() => root.classList.add('is-ready'));
+  // ---------- 2. Ingresso dell'hero: parola per parola, a molla ----------
+  const playEntrance = () => {
+    root.classList.add('is-ready');
+    if (!useMotion) return;
+    const words = [...document.querySelectorAll('.reveal-line > span')];
+    if (!words.length) return;
+    try {
+      const anim = M.animate(words,
+        { transform: ['translateY(105%)', 'translateY(0%)'] },
+        { type: spring, bounce: 0.25, visualDuration: 0.6, delay: M.stagger(0.055) });
+      Promise.resolve(anim.finished || anim).then(() => words.forEach(w => { w.style.transform = 'none'; }));
+    } catch (e) {
+      words.forEach(w => { w.style.transform = 'none'; });
+    }
+  };
+  const ready = () => requestAnimationFrame(playEntrance);
   if (document.fonts && document.fonts.ready) {
     Promise.race([document.fonts.ready, new Promise(r => setTimeout(r, 600))]).then(ready);
   } else { ready(); }
@@ -16,18 +36,103 @@
     window.addEventListener('scroll', onScroll, { passive: true });
   }
 
-  // Work index: hovering or focusing a project swaps the preview
-  const items = document.querySelectorAll('.work-item');
-  const figures = document.querySelectorAll('.work-preview figure');
+  // ---------- 1. Indice dei lavori: anteprima a tendina + inclinazione ----------
+  const items = [...document.querySelectorAll('.work-item')];
+  const figures = [...document.querySelectorAll('.work-preview figure')];
+  const preview = document.querySelector('.work-preview');
+  const tilt = document.querySelector('.work-preview .tilt');
+  const desktop = matchMedia('(min-width: 901px) and (pointer: fine)');
+  let current = Math.max(0, figures.findIndex(f => f.classList.contains('is-active')));
+
   const activate = (slug) => {
+    const idx = figures.findIndex(f => f.dataset.slug === slug);
     items.forEach(i => i.classList.toggle('is-active', i.dataset.slug === slug));
-    figures.forEach(f => f.classList.toggle('is-active', f.dataset.slug === slug));
+    if (idx < 0 || idx === current) return;
+
+    if (!useMotion || !desktop.matches) {
+      figures.forEach((f, i) => f.classList.toggle('is-active', i === idx));
+      current = idx;
+      return;
+    }
+
+    const dir = idx > current ? 1 : -1;
+    const prev = figures[current];
+    const next = figures[idx];
+    current = idx;
+    figures.forEach(f => {
+      f.style.zIndex = f === next ? 2 : f === prev ? 1 : 0;
+      if (f !== next && f !== prev) f.classList.remove('is-active');
+    });
+    next.classList.add('is-active');
+    const from = dir > 0 ? 'inset(100% 0% 0% 0%)' : 'inset(0% 0% 100% 0%)';
+    const wipe = M.animate(next, { clipPath: [from, 'inset(0% 0% 0% 0%)'] },
+      { type: spring, bounce: 0, visualDuration: 0.55 });
+    const img = next.querySelector('img');
+    if (img) M.animate(img, { transform: ['scale(1.12)', 'scale(1)'] }, { duration: 0.9, ease: [0.2, 0.7, 0.1, 1] });
+    Promise.resolve(wipe.finished || wipe).then(() => {
+      if (figures[current] === next && prev !== next) prev.classList.remove('is-active');
+    });
   };
+
   items.forEach(item => {
     const link = item.querySelector('a');
     link.addEventListener('mouseenter', () => activate(item.dataset.slug));
     link.addEventListener('focus', () => activate(item.dataset.slug));
   });
+
+  const index = document.querySelector('.work-index');
+  if (useMotion && index && tilt) {
+    let frame = 0, lastX = 0, lastY = 0;
+    const toTilt = (rx, ry) => M.animate(tilt,
+      { transform: `rotateX(${rx}deg) rotateY(${ry}deg)` },
+      { type: spring, stiffness: 140, damping: 18 });
+    index.addEventListener('pointermove', (e) => {
+      if (!desktop.matches) return;
+      lastX = e.clientX; lastY = e.clientY;
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        frame = 0;
+        const r = preview.getBoundingClientRect();
+        const x = Math.max(-1, Math.min(1, (lastX - (r.left + r.width / 2)) / (r.width)));
+        const y = Math.max(-1, Math.min(1, (lastY - (r.top + r.height / 2)) / (r.height)));
+        toTilt((-y * 5).toFixed(2), (x * 7).toFixed(2));
+      });
+    });
+    index.addEventListener('pointerleave', () => toTilt(0, 0));
+  }
+
+  // ---------- 5. Transizione tra pagine (View Transitions) ----------
+  // Il titolo ha un nome fisso in HTML; la copertina lo riceve solo sull'elemento visibile,
+  // perché due elementi con lo stesso nome annullerebbero la transizione.
+  const coverFor = (slug) => desktop.matches
+    ? figures.find(f => f.dataset.slug === slug)
+    : document.querySelector(`.work-item[data-slug="${slug}"] .thumb`);
+  const clearCovers = () => document.querySelectorAll('[data-vt]').forEach(el => { el.style.viewTransitionName = ''; });
+
+  items.forEach(item => {
+    item.querySelector('a').addEventListener('click', () => {
+      clearCovers();
+      const el = coverFor(item.dataset.slug);
+      if (el) el.style.viewTransitionName = `cover-${item.dataset.slug}`;
+    });
+  });
+
+  // Ritorno alla home da un case study: la copertina torna al suo posto nella lista
+  window.addEventListener('pagereveal', (e) => {
+    if (!e.viewTransition || !items.length) return;
+    const from = window.navigation && navigation.activation && navigation.activation.from;
+    const slug = from && from.url ? from.url.split('/').pop().replace('.html', '').split(/[?#]/)[0] : '';
+    if (!items.some(i => i.dataset.slug === slug)) return;
+    if (desktop.matches) {
+      figures.forEach(f => f.classList.toggle('is-active', f.dataset.slug === slug));
+      current = figures.findIndex(f => f.dataset.slug === slug);
+      items.forEach(i => i.classList.toggle('is-active', i.dataset.slug === slug));
+    }
+    const el = coverFor(slug);
+    if (el) el.style.viewTransitionName = `cover-${slug}`;
+    e.viewTransition.finished.finally(clearCovers);
+  });
+  window.addEventListener('pageshow', (e) => { if (e.persisted) clearCovers(); });
 
   // Contact spotlight follows the pointer (a nod to the old site's lime glow)
   const contact = document.querySelector('.contact');

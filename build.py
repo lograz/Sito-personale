@@ -78,6 +78,7 @@ def footer():
     <ul>{links}</ul>
   </div>
 </footer>
+<script src="js/motion.min.js" defer></script>
 <script src="js/site.js" defer></script>
 </body>
 </html>
@@ -114,13 +115,13 @@ def build_index(projects):
         style = f' style="--accent:{p["accent"]}"'
         items.append(f"""<li class="work-item{' is-active' if i == 0 else ''}" data-slug="{p['slug']}"{style}>
   <a href="{p['slug']}.html">
-    <span class="thumb"><img src="{p['cover']}" alt="" loading="lazy" width="1600" height="1200"></span>
-    <h3>{e(p['title'])}</h3>
+    <span class="thumb" data-vt="cover-{p['slug']}"><img src="{p['cover']}" alt="" loading="lazy" width="1600" height="1200"></span>
+    <h3 style="view-transition-name:title-{p['slug']}">{e(p['title'])}</h3>
     <span class="meta"><span>{e(p['kind'])}</span><span>{e(p['year'])}</span>{tag(p)}</span>
     <span class="arrow">{ARROW}</span>
   </a>
 </li>""")
-        previews.append(f"""<figure class="{'is-active' if i == 0 else ''}" data-slug="{p['slug']}"{style}>
+        previews.append(f"""<figure class="{'is-active' if i == 0 else ''}" data-slug="{p['slug']}" data-vt="cover-{p['slug']}"{style}>
   <img src="{p['cover']}" alt="Anteprima di {e(p['title'])}" {'' if i == 0 else 'loading="lazy" '}width="1600" height="1200">
   <figcaption>{e(p['summary'])}</figcaption>
 </figure>""")
@@ -141,7 +142,13 @@ def build_index(projects):
     }, ensure_ascii=False)
 
     lines = ["Disegno prodotti", "digitali che si usano", "senza pensarci."]
-    h1 = "".join(f'<span class="line reveal-line"><span style="--i:{i}">{l}</span></span>' for i, l in enumerate(lines))
+    words, h1 = 0, ""
+    for l in lines:
+        spans = []
+        for w in l.split():
+            spans.append(f'<span class="word" style="--i:{words}">{w}</span>')
+            words += 1
+        h1 += f'<span class="line reveal-line">{" ".join(spans)}</span>'
 
     page = head(
         "Lorenzo Gravina — Senior UI/UX Designer a Napoli",
@@ -180,9 +187,9 @@ def build_index(projects):
       <ul class="work-list">
 {chr(10).join(items)}
       </ul>
-      <div class="work-preview" aria-hidden="true">
+      <div class="work-preview" aria-hidden="true"><div class="tilt">
 {chr(10).join(previews)}
-      </div>
+      </div></div>
     </div>
   </div>
 </section>
@@ -247,14 +254,14 @@ def build_case(p, nxt):
 <section class="cs-hero">
   <div class="wrap">
     <a class="cs-back" href="index.html#lavori">{ARROW} Tutti i lavori</a>
-    <h1><span class="line reveal-line" style="display:block;overflow:hidden"><span style="--i:0;display:inline-block">{e(p['title'])}</span></span></h1>
+    <h1 style="view-transition-name:title-{p['slug']}">{e(p['title'])}</h1>
     <p class="summary reveal-fade">{e(p['summary'])}</p>
     <dl class="cs-facts reveal-fade">{facts_html}</dl>
     {links_html}
   </div>
 </section>
 <div class="wrap">
-  <div class="cs-cover"><img src="{p['cover']}" alt="{e(p['title'])}: panoramica del progetto" width="1600" height="1200"></div>
+  <div class="cs-cover" style="view-transition-name:cover-{p['slug']}"><img src="{p['cover']}" alt="{e(p['title'])}: panoramica del progetto" width="1600" height="1200"></div>
   <div class="cs-body">{''.join(body)}</div>
   <div class="gallery">{''.join(gallery)}</div>
   <a class="next" href="{nxt['slug']}.html"><span>Prossimo lavoro</span><strong>{e(nxt['title'])} {ARROW}</strong></a>
