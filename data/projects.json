@@ -1,50 +1,32 @@
 [
   {
-    "slug": "systemmanagement",
-    "title": "System Management",
-    "summary": "Il sito istituzionale di un gruppo IT che porta le aziende nel phygital.",
-    "kind": "Sito web",
-    "client": "System Management",
-    "year": "2024",
-    "role": "UI/UX design e sviluppo WordPress",
+    "slug": "toneday",
+    "title": "Toneday",
+    "summary": "Un colore al giorno, un'opera a settimana. Da guardare e da ascoltare.",
+    "kind": "Web app",
+    "client": "Progetto personale",
+    "year": "2026",
+    "role": "Ideazione, product design, direzione creativa e sonora",
     "status": "Online",
-    "accent": "#1453D6",
-    "cover": "img/work/sm/cover.webp",
-    "link": {
-      "label": "Visita il sito",
-      "url": "https://www.sysmanagement.it/"
-    },
-    "recognition": [
-      {
-        "label": "Nominee Awwwards",
-        "url": "https://www.awwwards.com/sites/system-management"
-      },
-      {
-        "label": "Nominee CSS Winner",
-        "url": "https://www.csswinner.com/details/system-management/18043"
-      }
+    "builtWith": "Claude",
+    "accent": "#0E1222",
+    "cover": "img/work/toneday/cover.webp",
+    "coverSize": [
+      1600,
+      1000
     ],
+    "link": {
+      "label": "Prova Toneday",
+      "url": "https://toneday.vercel.app"
+    },
+    "linkNote": "Meglio con le cuffie.",
+    "recognition": [],
+    "story": "content/toneday.md",
     "problem": "",
-    "work": "Ho progettato e sviluppato il sito di System Management con WordPress ed Elementor: architettura dei contenuti, navigazione, sistema visivo e le animazioni che accompagnano la lettura. L'obiettivo era far capire in pochi secondi cosa fa il gruppo e portare chi visita alle soluzioni giuste.",
-    "outcome": "Il sito è stato nominato su Awwwards e CSS Winner.",
-    "gallery": [
-      {
-        "src": "img/work/sm/1.webp",
-        "alt": "Homepage di System Management su desktop",
-        "wide": true
-      },
-      {
-        "video": "img/work/sm/2.mp4",
-        "poster": "img/work/sm/2-poster.jpg",
-        "alt": "Navigazione animata del sito System Management",
-        "wide": true
-      },
-      {
-        "src": "img/work/sm/3.webp",
-        "alt": "Pagine interne del sito System Management",
-        "wide": true
-      }
-    ]
+    "work": "",
+    "outcome": "",
+    "gallery": [],
+    "coverPosition": "0% 50%"
   },
   {
     "slug": "geeba",
@@ -87,7 +69,8 @@
         "src": "img/work/geeba/7.webp",
         "alt": "Commessa evidenziata con il colore scelto"
       }
-    ]
+    ],
+    "builtWith": ""
   },
   {
     "slug": "dylandog",
@@ -145,7 +128,8 @@
         "src": "img/work/dd/9.webp",
         "alt": "Schermata dell'app Dylan Dog Collect"
       }
-    ]
+    ],
+    "builtWith": ""
   },
   {
     "slug": "kimbo",
@@ -182,7 +166,8 @@
         "alt": "Pagina della storia del marchio nella proposta per Kimbo",
         "wide": true
       }
-    ]
+    ],
+    "builtWith": ""
   },
   {
     "slug": "megaapp",
@@ -213,6 +198,7 @@
         "src": "img/work/megaapp/3.webp",
         "alt": "Dettaglio prodotto nella proposta MegaApp"
       }
-    ]
+    ],
+    "builtWith": ""
   }
 ]

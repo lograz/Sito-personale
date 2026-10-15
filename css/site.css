@@ -216,7 +216,7 @@ a { color: inherit; }
 .cs-back:hover svg { transform: rotate(180deg) translateX(4px); }
 .cs-hero h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(3rem, 10vw, 9.5rem); line-height: .92; letter-spacing: -0.045em; margin: 0 0 20px; font-variation-settings: "wdth" 82; }
 .cs-hero .summary { font-size: clamp(1.15rem, 1.4vw + .7rem, 1.7rem); max-width: 32ch; margin: 0; font-family: var(--font-display); font-weight: 500; line-height: 1.3; letter-spacing: -0.01em; }
-.cs-facts { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; margin: clamp(32px, 5vw, 56px) 0 0; border-top: 1px solid var(--line); }
+.cs-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); gap: 0; margin: clamp(32px, 5vw, 56px) 0 0; border-top: 1px solid var(--line); }
 .cs-facts div { padding: 18px 16px 0 0; }
 .cs-facts dt { color: var(--slate); font-size: .9rem; }
 .cs-facts dd { margin: 4px 0 0; font-weight: 600; }
@@ -282,3 +282,22 @@ a { color: inherit; }
 }
 @keyframes vt-out { to { opacity: 0; } }
 @keyframes vt-in { from { opacity: 0; transform: translateY(16px); } }
+
+/* ---------- Case study raccontato (content/*.md) ---------- */
+.story { display: grid; gap: clamp(40px, 6vw, 88px); padding: clamp(48px, 8vw, 112px) 0 0; }
+.story-section { display: grid; grid-template-columns: 14rem minmax(0, 1fr); gap: 8px clamp(24px, 5vw, 80px); max-width: 1080px; }
+.story-section h2 { font: 600 1rem/1.4 var(--font-body); color: var(--slate); margin: 6px 0 0; text-wrap: balance; }
+.story-text { display: grid; gap: 1em; min-width: 0; }
+.story-text p, .story-text li { margin: 0; font-size: clamp(1.05rem, .6vw + .9rem, 1.25rem); line-height: 1.6; max-width: 62ch; }
+.story-text ul, .story-text ol { margin: 0; padding-left: 1.2em; display: grid; gap: .6em; }
+.story-text li::marker { color: var(--slate); }
+.story-text strong { font-weight: 650; }
+.story-figure { margin: 0; border-radius: 20px; overflow: hidden; background: var(--accent, var(--mist)); }
+.story-figure img { width: 100%; }
+.story-figure.square { max-width: 880px; width: 100%; justify-self: center; }
+.story-figure.tall { max-width: 420px; width: 100%; justify-self: center; }
+@media (max-width: 720px) { .story-section { grid-template-columns: 1fr; } .story-section > span { display: none; } }
+
+.tag.ai { background: var(--ink); color: #fff; }
+.cs-note { align-self: center; color: var(--slate); }
+.ai-title { margin-top: 28px !important; }
