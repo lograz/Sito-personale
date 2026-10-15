@@ -134,6 +134,61 @@
   });
   window.addEventListener('pageshow', (e) => { if (e.persisted) clearCovers(); });
 
+  // ---------- 3. Case study: copertina legata allo scroll, schermate che entrano una volta ----------
+  const cover = document.querySelector('.cs-cover');
+  if (useMotion && cover && M.scroll) {
+    M.scroll((progress) => {
+      const s = 0.92 + 0.08 * progress;
+      cover.style.transform = `scale(${s.toFixed(4)})`;
+    }, { target: cover, offset: ['start end', 'start 0.2'] });
+  }
+
+  const shots = [...document.querySelectorAll('.gallery figure')];
+  if (useMotion && shots.length && M.inView) {
+    const below = shots.filter(el => el.getBoundingClientRect().top > window.innerHeight * 0.9);
+    below.forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(40px)'; });
+    const seen = new WeakSet();
+    M.inView(below, (el) => {
+      if (seen.has(el)) return;
+      seen.add(el);
+      // le schermate sulla stessa riga entrano in sequenza
+      const row = el.classList.contains('wide') ? 0 : shots.filter(s => !s.classList.contains('wide')).indexOf(el) % 3;
+      const anim = M.animate(el,
+        { opacity: [0, 1], transform: ['translateY(40px)', 'translateY(0px)'] },
+        { type: spring, bounce: 0.15, visualDuration: 0.6, delay: row * 0.09 });
+      Promise.resolve(anim.finished || anim).then(() => { el.style.opacity = ''; el.style.transform = ''; });
+    }, { margin: '0px 0px -12% 0px' });
+  }
+
+  // ---------- 4. Bottone magnetico nel blocco contatti (solo desktop) ----------
+  const magnet = document.querySelector('.contact .btn.primary');
+  const contactBox = document.querySelector('.contact');
+  if (useMotion && magnet && contactBox && matchMedia('(pointer: fine)').matches) {
+    let pulled = false, frame = 0, px = 0, py = 0;
+    const moveTo = (x, y) => M.animate(magnet,
+      { transform: `translate(${x}px, ${y}px)` },
+      { type: spring, stiffness: 260, damping: 16 });
+    contactBox.addEventListener('pointermove', (e) => {
+      px = e.clientX; py = e.clientY;
+      if (frame) return;
+      frame = requestAnimationFrame(() => {
+        frame = 0;
+        const r = magnet.getBoundingClientRect();
+        const dx = px - (r.left + r.width / 2);
+        const dy = py - (r.top + r.height / 2);
+        const reach = Math.max(r.width, r.height) * 0.5 + 70;
+        if (Math.hypot(dx, dy) < reach) {
+          pulled = true;
+          moveTo((dx * 0.3).toFixed(1), (dy * 0.4).toFixed(1));
+        } else if (pulled) {
+          pulled = false;
+          moveTo(0, 0);
+        }
+      });
+    });
+    contactBox.addEventListener('pointerleave', () => { if (pulled) { pulled = false; moveTo(0, 0); } });
+  }
+
   // Contact spotlight follows the pointer (a nod to the old site's lime glow)
   const contact = document.querySelector('.contact');
   if (contact && matchMedia('(pointer: fine)').matches) {
